@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two CSS</title>
+    <link rel="stylesheet" id="stylesheet" href="css/style1.css">
+    <script src="script/switch.js"></script>
+</head>
+<body>
+<main>
+    <section>
+        <article class="picture-box">
+            <img src="images/elias_8.jpg" alt="picture of Elias">
+        </article>
+        <article id="text-container">
+            <h1>ELIAS</h1>
+            <p>It's strange how many ways there are to miss someone. </p>
+            <p>You miss the things they did and who they were, but you also
+                miss who you were to them. </p>
+            <p>The way everything you said and did was beautiful or
+                entertaining or important.</p>
+            <p>How much you mattered.</p>
+            <button id="switchbutton" type="button"
+                    onclick="switchCSS('css/style1.css', 'css/style2.css'); return false;">
+                <span id="buttonText-1">WE MISS YOU</span>
+                <span id="buttonText-2">COME BACK</span>
+            </button>
+        </article>
+        <article class="picture-box">
+            <img src="images/elias_7.jpg" alt="picture of Elias">
+        </article>
+    </section>
+    <section>
+        <article class="picture-box">
+            <img src="images/elias_3.jpg" alt="picture of Elias">
+        </article>
+        <article class="reverse-picture-box blur">
+            <img src="images/grave_elias.jpg" alt="Picture of Elias's gravestone">
+        </article>
+        <article class="picture-box">
+            <img src="images/elias.jpg" alt="picture of Elias">
+        </article>
+    </section>
+</main>
+<footer>
+    Quote taken from Robin Roe,
+    <a href="https://www.goodreads.com/work/quotes/45424741-a-list-of-cages">
+        A List of Cages</a>
+</footer>
+
+<!-- What a ride! -->
+</body>
+</html>

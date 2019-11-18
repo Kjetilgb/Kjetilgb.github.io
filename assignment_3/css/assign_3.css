@@ -1,0 +1,58 @@
+body {
+    font-family: Helvetica, serif;
+    width: 60%;
+    padding-left: 1em;
+}
+
+a, a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    box-shadow: inset 0 -1.5px 0 crimson;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: crimson;
+    transition: color 0.3s;
+}
+
+h1 > span {
+    font-weight: normal;
+}
+
+h2 > span {
+    font-size: 70%;
+    font-style: italic;
+    display: block;
+}
+
+p {
+line-height: 1.3em;
+margin: 0 0 1em 0;
+}
+
+q {
+    font-style: italic;
+}
+
+@media screen and (orientation: portrait){
+    body {
+        width: auto;
+        padding: 2em;
+        background: lavender;
+    }
+
+    p {
+        line-height: 1.4em;
+    }
+}
+
+@media print {
+    a::after {
+        content: " (" attr(href) ") ";
+    }
+
+    body {
+        background: pink;
+    }
+}

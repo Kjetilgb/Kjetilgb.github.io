@@ -1,7 +1,17 @@
 @font-face {
-    font-family: 'MyFont';
-    src: url(),
-        url();
+    font-family: 'sevastian';
+    src: url('../fonts/sevastian-base.woff') format('woff'),
+         url('../fonts/sevastian-base.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/BebasNeue-Regular.woff') format('woff'),
+         url('../fonts/BebasNeue-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @keyframes bubble-to-top {
@@ -15,13 +25,13 @@
 
 @keyframes wiggle {
     0% {
-        transform: translate(20vw)
+        left: inherit;
     }
     50% {
-        transform: translate(25vw)
+        left: -5vw;
     }
     100% {
-        transform: translate(20vw)
+        left: inherit;
     }
 }
 
@@ -43,18 +53,19 @@ body {
     background: #70E2FF;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    transition: .6s;
 }
 
 a, a:link, a:visited {
     text-decoration: none;
     color: white;
-    font: bold 150% Arial, sans-serif;
+    font: bold 220% Arial, sans-serif;
     text-shadow: 1px 1px #000,
                  1.5px 1.5px #000,
                  2px 2px #000,
                  2.5px 2.5px #000,
                  3px 3px #000;
-    transition: .6s
+    transition: .6s;
 }
 
 a:hover {
@@ -81,8 +92,16 @@ header {
 }
 
 header h1 {
-    font-size: 250%;
+    font-size: 400%;
+    font-family: 'Bebas';
+    letter-spacing: .2em;
     color: black;
+    transform: skew(-12deg) rotate(-3deg);
+    text-shadow: 1px 1px #fff,
+                 1.5px 1.5px #fff,
+                 2px 2px #fff,
+                 2.5px 2.5px #fff,
+                 3px 3px #fff;
 }
 
 nav > ul {
@@ -92,7 +111,7 @@ nav > ul {
 }
 
 nav > ul > li {
-    /* transform: rotate(-2deg) */
+    transform: skew(-12deg) rotate(-3deg);
 }
 
 nav > ul > li:not(:last-child) {
@@ -127,11 +146,13 @@ main {
     position: absolute;
     border-radius: 50%;
     border: 1px solid white;
-    transform: translateY(30px);
+    background: radial-gradient(transparent, white)
 }
 
 .wiggle {
+    position: inherit;
     animation: wiggle 2s ease-in-out infinite;
+    height: inherit;
 }
 
 .b1 {
@@ -156,4 +177,12 @@ main {
     width: 40px;
     height: 40px;
     animation: bubble-to-top 10s infinite
+}
+
+.b4 {
+    bottom: -30px;
+    left: 55%;
+    width: 30px;
+    height: 30px;
+    animation: bubble-to-top 15s infinite;
 }
