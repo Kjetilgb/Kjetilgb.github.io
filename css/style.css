@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(),
+        url();
+}
+
+@keyframes bubble-to-top {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-110vh)
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translate(20vw)
+    }
+    50% {
+        transform: translate(25vw)
+    }
+    100% {
+        transform: translate(20vw)
+    }
+}
+
+@keyframes hoverLink {
+    from {padding-bottom: 0;}
+    to{padding-bottom: 10px;}
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #70E2FF;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+    font: bold 150% Arial, sans-serif;
+    text-shadow: 1px 1px #000,
+                 1.5px 1.5px #000,
+                 2px 2px #000,
+                 2.5px 2.5px #000,
+                 3px 3px #000;
+    transition: .6s
+}
+
+a:hover {
+    color: #fff056;
+    position: relative;
+    top: -3px;
+    left: -3px;
+    z-index: 99;
+    text-shadow: 1px 1px #000,
+                 2px 2px #000,
+                 3px 3px #000,
+                 4px 4px #000,
+                 5px 5px #000;
+}
+
+header {
+    width: 100%;
+    height: 90%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 250%;
+    color: black;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li {
+    /* transform: rotate(-2deg) */
+}
+
+nav > ul > li:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+main {
+    z-index: -99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#bubbles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform: translateY(30px);
+}
+
+.wiggle {
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+.b1 {
+    bottom: -30px;
+    left: 90%;
+    width: 25px;
+    height: 25px;
+    animation: bubble-to-top 6s infinite;
+}
+
+.b2 {
+    bottom: -60px;
+    left: 60%;
+    width: 50px;
+    height: 50px;
+    animation: bubble-to-top 8s infinite;
+}
+
+.b3 {
+    bottom: -40px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    animation: bubble-to-top 10s infinite
+}
