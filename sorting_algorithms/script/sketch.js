@@ -4,7 +4,7 @@
  */
 
 let values = []; // Array which are sorted by different algorithms
-let w = 5; // Variable which helps set the size of the values-array
+let w = 10; // Variable which helps set the size of the values-array
 let button; // Just a button
 let sel; // Just a selection
 
